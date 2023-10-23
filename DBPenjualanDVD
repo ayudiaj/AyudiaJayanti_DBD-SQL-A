@@ -1,0 +1,65 @@
+create schema 	PENJUALANDVD;
+
+use PENJUALANDVD;
+
+create table GENRE(
+ID_GENRE smallint primary key not null,
+GENRE VARCHAR(45) not null
+)
+
+create table GENRE_MOVIE(
+KODE_GENRE smallint,
+KODE_DVD VARCHAR(10),
+foreign key (KODE_GENRE) references GENRE(ID_GENRE),
+foreign key (KODE_DVD) references MOVIE(KODE_DVD)
+)
+
+create table TRANSAKSI(
+KODE_DVD VARCHAR(10),
+KODE_PELANGGAN VARCHAR(10),
+TANGGAL_SEWA DATE,
+TANGGAL_WAJIB_KEMBALI DATE,
+TANGGAL_REALISASI_KEMBALI DATE,
+foreign key (KODE_DVD) references MOVIE(KODE_DVD),
+foreign key (KODE_PELANGGAN) references PELANGGANG(KODE_PELANGGAN)
+)
+
+create table PELANGGAN(
+KODE_PELANGGAN VARCHAR(10) primary key not null,
+ID_KELURAHAN smallint,
+NAMA VARCHAR(45),
+ALAMAT VARCHAR(60),
+JENIS_KELAMIN CHAR(1),
+constraint CHECK_JK check (JENIS_KELAMIN in ('P', 'L')),
+foreign key (ID_KELURAHAN) references KELURAHAN(ID_KELURAHAN)
+)
+
+create table KECAMATAN (
+ID_KECAMATAN smallint not null,
+KECAMATAN VARCHAR(45),
+primary key (ID_KECAMATAN)
+)
+
+create table KELURAHAN (
+ID_KELURAHAN smallint primary key not null,
+ID_KECAMATAN smallint not null,
+KELURAHAN VARCHAR(45),
+foreign key (ID_KECAMATAN) references KECAMATAN(ID_KECAMATAN)
+)
+
+create table KONTAK_PELANGGAN(
+NO_HP VARCHAR(25),
+KODE_PELANGGAN VARCHAR(10),
+unique (NO_HP),
+foreign key (KODE_PELANGGAN) references PELANGGAN(KODE_PELANGGAN)
+)
+create table MOVIE(
+KODE_DVD VARCHAR(10) primary key not null, 
+JUDUL VARCHAR(60) not null,
+HARGA_SEWA DOUBLE,
+DENDA DOUBLE,
+TAHUN_RILIS smallint
+)
+
+alter table MOVIE 
+modify TAHUN_RILIS YEAR(4);
