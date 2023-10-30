@@ -47,7 +47,7 @@ foreign key (ID_STRATA) references STRATA(ID_STRATA),
 foreign key (ID_JURUSAN) references JURUSAN(ID_JURUSAN)
 )
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/6.%20create%20table%20PROGRAM%20STUDI.png)
 
 ```
 create table SELEKSI_MASUK (
