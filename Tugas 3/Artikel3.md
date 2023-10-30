@@ -17,7 +17,7 @@ ID_FAKULTAS smallint primary key not null,
 FAKULTAS VARCHAR(45) not null
 )
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/3.%20create%20table%20FAKULTAS.png)
 
 ```
 create table JURUSAN (
@@ -26,7 +26,7 @@ ID_FAKULTAS smallint not null,
 JURUSAN VARCHAR(45) not null,
 foreign key (ID_FAKULTAS) references FAKULTAS(ID_FAKULTAS)
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/4.%20create%20table%20JURUSAN.png)
 
 ```
 create table STRATA (
@@ -35,7 +35,7 @@ SINGKAT VARCHAR(10),
 STRATA VARCHAR(45)
 )
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/5.%20create%20table%20STRATA.png)
 
 ```
 create table PROGRAM_STUDI (
