@@ -17,6 +17,8 @@ ID_FAKULTAS smallint primary key not null,
 FAKULTAS VARCHAR(45) not null
 )
 ```
+![alt text]()
+
 ```
 create table JURUSAN (
 ID_JURUSAN smallint primary key not null,
@@ -24,6 +26,7 @@ ID_FAKULTAS smallint not null,
 JURUSAN VARCHAR(45) not null,
 foreign key (ID_FAKULTAS) references FAKULTAS(ID_FAKULTAS)
 ```
+![alt text]()
 
 ```
 create table STRATA (
@@ -32,6 +35,7 @@ SINGKAT VARCHAR(10),
 STRATA VARCHAR(45)
 )
 ```
+![alt text]()
 
 ```
 create table PROGRAM_STUDI (
@@ -43,6 +47,7 @@ foreign key (ID_STRATA) references STRATA(ID_STRATA),
 foreign key (ID_JURUSAN) references JURUSAN(ID_JURUSAN)
 )
 ```
+![alt text]()
 
 ```
 create table SELEKSI_MASUK (
@@ -51,6 +56,8 @@ SINGKAT VARCHAR(12) not null,
 SELEKSI_MASUK VARCHAR(100) not null
 )
 ```
+![alt text]()
+
 
 ```
 create table MAHASISWA (
@@ -67,6 +74,7 @@ foreign key (ID_PROGRAM_STUDI) references PROGRAM_STUDI(ID_PROGRAM_STUDI),
 constraint CHECKJK check (JENIS_KELAMIN in ('P', 'L'))
 )
 ```
+![alt text]()
 
 ```
 insert into FAKULTAS (ID_FAKULTAS, FAKULTAS)
@@ -74,6 +82,7 @@ values
 (1, 'Ekonomi & Bisnis'),
 (2, 'Ilmu Komputer');
 ```
+![alt text]()
 
 ```
 insert into JURUSAN (ID_JURUSAN, ID_FAKULTAS, JURUSAN)
@@ -82,6 +91,7 @@ values
 (22, 2, 'Sistem Informasi'),
 (23, 2, 'Teknik Komputer');
 ```
+![alt text]()
 
 ```
 insert into STRATA (ID_STRATA, SINGKAT, STRATA)
@@ -90,6 +100,7 @@ values
 (2, 'S1', 'Sarjana'),
 (3, 'S3', 'Magister');
 ```
+![alt text]()
 
 ```
 insert into PROGRAM_STUDI (ID_PROGRAM_STUDI, ID_STRATA, ID_JURUSAN, PROGRAM_STUDI)
@@ -98,14 +109,15 @@ values
 (212, 2, 21, 'Teknik Komputer'),
 (219, 3, 21, 'Magister Ilmu Komputer');
 ```
+![alt text]()
 
 ```
 insert into SELEKSI_MASUK (ID_SELEKSI_MASUK, SINGKAT, SELEKSI_MASUK)
 values 
 (1, 'SNMPTN', 'SELEKSI NASIONAL MAHASISWA PERGURUAN TINGGI NEGERI'),
 (2, 'SBMPTN', 'SELEKSI BERSAMA MAHASISWA PERGURUAN TINGGI NEGERI');
-
 ```
+![alt text]()
 
 ```
 insert into MAHASISWA (NIM, ID_SELEKSI_MASUK, ID_PROGRAM_STUDI, NAMA, ANGKATAN, TGL_LAHIR, KOTA_LAHIR, JENIS_KELAMIN)
@@ -114,3 +126,4 @@ values
 ('155150401', 2, 212, 'JONO', 2015, 2/10/1997, 'Situbondo', 'L');
 ```
 )
+![alt text]()
