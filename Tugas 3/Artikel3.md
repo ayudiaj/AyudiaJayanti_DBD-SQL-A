@@ -2,7 +2,7 @@
 ```
 create schema Akademik;
 ```
-![alt text]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true(https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/1.%20create%20schema.png))
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/1.%20create%20schema.png)
 
 ## Menggunakan Database "Akademik"
 ```
