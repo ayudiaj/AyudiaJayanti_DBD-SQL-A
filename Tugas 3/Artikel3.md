@@ -1,5 +1,5 @@
 # Tugas3 DBD-SQL-A
-### Buat Schema "Akademik"
+## Buat Schema "Akademik"
 ```
 create schema Akademik;
 ```
@@ -9,6 +9,7 @@ create schema Akademik;
 ```
 use kampus;
 ```
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/2.%20use%20schema.png)
 
 ```
 create table FAKULTAS (
