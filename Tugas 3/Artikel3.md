@@ -1,4 +1,5 @@
-## Buat Schema "Akademik"
+# Tugas3 DBD-SQL-A
+### Buat Schema "Akademik"
 ```
 create schema Akademik;
 ```
