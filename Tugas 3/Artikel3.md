@@ -1,16 +1,17 @@
 # Tugas3 DBD-SQL-A
-## Buat Schema "Akademik"
+## Buat Schema Akademik
 ```
 create schema Akademik;
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/1.%20create%20schema.png)
 
-## Menggunakan Database "Akademik"
+## Menggunakan Database Akademik
 ```
 use kampus;
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/2.%20use%20schema.png)
 
+## Membuat tabel Fakultas
 ```
 create table FAKULTAS (
 ID_FAKULTAS smallint primary key not null,
@@ -19,6 +20,7 @@ FAKULTAS VARCHAR(45) not null
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/3.%20create%20table%20FAKULTAS.png)
 
+## Membuat tabel Jurusan
 ```
 create table JURUSAN (
 ID_JURUSAN smallint primary key not null,
@@ -28,6 +30,7 @@ foreign key (ID_FAKULTAS) references FAKULTAS(ID_FAKULTAS)
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/4.%20create%20table%20JURUSAN.png)
 
+## Membuat tabel Strata
 ```
 create table STRATA (
 ID_STRATA smallint primary key not null,
@@ -37,6 +40,7 @@ STRATA VARCHAR(45)
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/5.%20create%20table%20STRATA.png)
 
+## Membuat tabel Program Studi
 ```
 create table PROGRAM_STUDI (
 ID_PROGRAM_STUDI smallint primary key not null,
@@ -49,6 +53,7 @@ foreign key (ID_JURUSAN) references JURUSAN(ID_JURUSAN)
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/6.%20create%20table%20PROGRAM%20STUDI.png)
 
+## Membuat tabel Seleksi Masuk
 ```
 create table SELEKSI_MASUK (
 ID_SELEKSI_MASUK smallint primary key not null,
@@ -58,7 +63,7 @@ SELEKSI_MASUK VARCHAR(100) not null
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/7.%20create%20table%20SELEKSI_MASUK.png)
 
-
+## Membuat tabel Mahasiswa
 ```
 create table MAHASISWA (
 NIM VARCHAR(15) primary key not null,
@@ -76,6 +81,7 @@ constraint CHECKJK check (JENIS_KELAMIN in ('P', 'L'))
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/8.%20create%20table%20MAHASISWA.png)
 
+## Memasukkan data ke dalam tabel Fakultas
 ```
 insert into FAKULTAS (ID_FAKULTAS, FAKULTAS)
 values 
@@ -84,6 +90,7 @@ values
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/9.%20insert%20into%20FAKULTAS.png)
 
+## Memasukkan data ke dalam tabel Jurusan
 ```
 insert into JURUSAN (ID_JURUSAN, ID_FAKULTAS, JURUSAN)
 values 
@@ -93,6 +100,7 @@ values
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/10.%20insert%20into%20JURUSAN.png)
 
+## Memasukkan data ke dalam tabel Strata
 ```
 insert into STRATA (ID_STRATA, SINGKAT, STRATA)
 values 
@@ -102,6 +110,7 @@ values
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/11.%20insert%20into%20STRATA.png)
 
+## Memasukkan data ke dalam tabel Program Studi
 ```
 insert into PROGRAM_STUDI (ID_PROGRAM_STUDI, ID_STRATA, ID_JURUSAN, PROGRAM_STUDI)
 values 
@@ -111,6 +120,7 @@ values
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/12.%20insert%20into%20PROGRAM%20STUDI.png)
 
+## Memasukkan data ke dalam tabel Seleksi Masuk
 ```
 insert into SELEKSI_MASUK (ID_SELEKSI_MASUK, SINGKAT, SELEKSI_MASUK)
 values 
@@ -119,6 +129,7 @@ values
 ```
 ![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/13.%20insert%20into%20SELEKSI%20MASUK.png)
 
+## Memasukkan data ke dalam tabel Mahasiswa
 ```
 insert into MAHASISWA (NIM, ID_SELEKSI_MASUK, ID_PROGRAM_STUDI, NAMA, ANGKATAN, TGL_LAHIR, KOTA_LAHIR, JENIS_KELAMIN)
 values
