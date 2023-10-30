@@ -1,4 +1,4 @@
-##Buat Schema "Akademik"
+## Buat Schema "Akademik"
 ```
 create schema Akademik;
 ```
