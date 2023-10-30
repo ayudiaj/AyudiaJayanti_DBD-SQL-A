@@ -56,7 +56,7 @@ SINGKAT VARCHAR(12) not null,
 SELEKSI_MASUK VARCHAR(100) not null
 )
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/7.%20create%20table%20SELEKSI_MASUK.png)
 
 
 ```
@@ -74,7 +74,7 @@ foreign key (ID_PROGRAM_STUDI) references PROGRAM_STUDI(ID_PROGRAM_STUDI),
 constraint CHECKJK check (JENIS_KELAMIN in ('P', 'L'))
 )
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/8.%20create%20table%20MAHASISWA.png)
 
 ```
 insert into FAKULTAS (ID_FAKULTAS, FAKULTAS)
@@ -82,7 +82,7 @@ values
 (1, 'Ekonomi & Bisnis'),
 (2, 'Ilmu Komputer');
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/9.%20insert%20into%20FAKULTAS.png)
 
 ```
 insert into JURUSAN (ID_JURUSAN, ID_FAKULTAS, JURUSAN)
@@ -91,7 +91,7 @@ values
 (22, 2, 'Sistem Informasi'),
 (23, 2, 'Teknik Komputer');
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/10.%20insert%20into%20JURUSAN.png)
 
 ```
 insert into STRATA (ID_STRATA, SINGKAT, STRATA)
@@ -100,7 +100,7 @@ values
 (2, 'S1', 'Sarjana'),
 (3, 'S3', 'Magister');
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/11.%20insert%20into%20STRATA.png)
 
 ```
 insert into PROGRAM_STUDI (ID_PROGRAM_STUDI, ID_STRATA, ID_JURUSAN, PROGRAM_STUDI)
@@ -109,7 +109,7 @@ values
 (212, 2, 21, 'Teknik Komputer'),
 (219, 3, 21, 'Magister Ilmu Komputer');
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/12.%20insert%20into%20PROGRAM%20STUDI.png)
 
 ```
 insert into SELEKSI_MASUK (ID_SELEKSI_MASUK, SINGKAT, SELEKSI_MASUK)
@@ -117,7 +117,7 @@ values
 (1, 'SNMPTN', 'SELEKSI NASIONAL MAHASISWA PERGURUAN TINGGI NEGERI'),
 (2, 'SBMPTN', 'SELEKSI BERSAMA MAHASISWA PERGURUAN TINGGI NEGERI');
 ```
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/13.%20insert%20into%20SELEKSI%20MASUK.png)
 
 ```
 insert into MAHASISWA (NIM, ID_SELEKSI_MASUK, ID_PROGRAM_STUDI, NAMA, ANGKATAN, TGL_LAHIR, KOTA_LAHIR, JENIS_KELAMIN)
@@ -126,4 +126,4 @@ values
 ('155150401', 2, 212, 'JONO', 2015, 2/10/1997, 'Situbondo', 'L');
 ```
 )
-![alt text]()
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas%203/14.%20insert%20into%20MAHASISWA.png)
