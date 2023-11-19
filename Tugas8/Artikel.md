@@ -7,6 +7,10 @@ insert into akademik.mahasiswa
 values  ('155150404', 1, 212, 'JESSY', 2016, '1999-2-10','BANDUNG', 'P'),
 		('155150405', 2, 219, 'BAMBANG', '2014', '1996-9-27', 'MAKASAR', 'L');
 ```
+
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas8/Tugas%208/Latihan%201%20-%201.png)
+
+
 ### 2. Lakukan perintah DDL seperti yang ada pada Perintah 6.8 untuk membuat sebuah table baru Mahasiswa_Pindahan
 ```
 create table akademik.MAHASISWA_PINDAHAN (
@@ -22,6 +26,10 @@ create table akademik.MAHASISWA_PINDAHAN (
 	JENIS_KELAMIN CHAR(1) check (JENIS_KELAMIN in ('P', 'L'))
 );
 ```
+
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas8/Tugas%208/Latihan%201%20-%202.png)
+
+
 ### 3. Lakukan perintah Insert seperti yang ada pada Perintah 6.9 untuk menambahkan data pada table Mahasiswa_Pindahan
 ```
 INSERT INTO AKADEMIK.MAHASISWA_PINDAHAN
@@ -30,6 +38,10 @@ INSERT INTO AKADEMIK.MAHASISWA_PINDAHAN
 	('155150502', 2 ,211,'DIMAS', 2015,'1998-4-11','SURABAYA','L'),
 	('155150503', 2 ,211,'DIDIN',2015,'1997-2-26','BANDUNG','L');
 ```
+
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas8/Tugas%208/Latihan%201%20-%203.png)
+
+
 ### 4. Tampilkan NIM, NAMA, JENIS_KELAMIN, KOTA LAHIR dan ANGKATAN dari Mahasiswa yang memiliki Kota Lahir dengan inisial B dan dari Mahasiswa_Pindahan yang memiliki Namadengan inisial D. Urutkan berdasarkan NIM.
 ```
 select M.NIM, M.NAMA, M.JENIS_KELAMIN, M.KOTA_LAHIR, M.ANGKATAN 
@@ -43,6 +55,10 @@ from mahasiswa_pindahan mp
 where mp.nama like 'D%'
 order by nim
 ```
+
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas8/Tugas%208/Latihan%201%20-%204.png)
+
+
 
 ### 5. Tampilkan NIM, NAMA, JENIS_KELAMIN, KOTA LAHIR dan ANGKATAN dari Mahasiswa Angkatan 2015 dan dari Mahasiswa_Pindahan tetapi kecuali Mahasiswa_Pindahan yang memiliki Kota Lahir dengan inisial M urutkan berdasarkan NIM. 
 ```
@@ -58,6 +74,9 @@ where mp.kota_lahir like 'M%'
 order by nim
 ```
 
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas8/Tugas%208/Latihan%201%20-%205.png)
+
+
 ## Latihan-2
 ### 1. Tampilkan NIM, Nama dan Angkatan dari Mahasiswa yang memiliki Kota Lahir yang sama dengan Mahasiswa Pindahan dengan nama BUDI
 ```
@@ -66,9 +85,14 @@ from mahasiswa m
 where KOTA_LAHIR = (select KOTA_LAHIR from mahasiswa_pindahan where nama='BUDI')
 ```
 
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas8/Tugas%208/Latihan%202%20-%201.png)
+
+
 ### 2. Tampilkan NIM, Nama dan Angkatan dari Mahasiswa yang memiliki Kota Lahir yang sama dengan seluruh Mahasiswa Pindahan
 ```
 select m.NIM, m.NAMA, m.ANGKATAN
 from mahasiswa m 
 where KOTA_LAHIR in (select distinct KOTA_LAHIR from mahasiswa_pindahan)
 ```
+
+![alt text](https://github.com/ayudiaj/AyudiaJayanti_DBD-SQL-A/blob/main/Tugas8/Tugas%208/Latihan%202%20-%202.png)
